@@ -1,15 +1,35 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  
+ <h3>QR Code Reader</h3>
+
+   <div>
+     
+     <qrcode-capture @decode="onDecode" />
+    <p class="decode-result">Last result: <b>{{ result }}</b></p>
+
+    
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+import QrcodeCapture from '../node_modules/vue-qrcode-reader/src/components/QrcodeCapture.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    
+    QrcodeCapture
+  },
+  data () {
+    return {
+      result: ''
+    }
+  },
+  methods: {
+    onDecode (result) {
+      this.result = result
+    }
   }
 }
 </script>
