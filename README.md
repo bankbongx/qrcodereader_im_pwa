@@ -23,3 +23,5 @@ npm run lint
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
 # qrcodereader_im_pwa
+# qrcodereader_im_pwa
+# qrcodereader_im_pwa
