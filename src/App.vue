@@ -5,7 +5,8 @@
    <div>
      
      <qrcode-capture @decode="onDecode" />
-    <p class="decode-result">Last result: <b>{{ result }}</b></p>
+     <p class="decode-result">Result: <a v-bind:href="result"><b>{{ result }}</b></a></p>
+    
 
     
   </div>
